@@ -1,0 +1,20 @@
+table {
+	width: 100%;
+	border-collapse: collapse;
+
+	th, td {
+		padding: .65rem .75rem;
+		text-align: left;
+		border-bottom: 1px solid var(--border);
+	}
+
+	th { color: var(--text-soft); font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; }
+
+	.action { text-align: right; white-space: nowrap; }
+}
+
+.clickable-row {
+	cursor: pointer;
+
+	&:hover { background: var(--bg); }
+}

@@ -1,0 +1,17 @@
+{
+	"name": "skankydev-starter",
+	"version": "0.1.0",
+	"description": "SkankyDev Starter",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite build --watch --mode development",
+		"watch": "vite build --watch --mode development",
+		"build": "vite build --mode production",
+		"prod": "vite build --mode production"
+	},
+	"devDependencies": {
+		"sass": "^1.94.2",
+		"vite": "^7.2.4"
+	}
+}

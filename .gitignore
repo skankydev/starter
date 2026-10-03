@@ -1,0 +1,28 @@
+# Dépendances
+vendor/
+node_modules/
+build/
+
+# Environnement (NE JAMAIS COMMITER)
+.env
+
+# Dev local : branche le starter sur ../SkankyDev (cf. README)
+composer.local.json
+composer.local.lock
+
+# Logs
+/logs
+
+# Cache
+.phpunit.cache/
+
+# Sourcemaps buildées
+public/dist/*.map
+
+# IDE & OS
+.claude
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+Desktop.ini
+public/upload/*

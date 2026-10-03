@@ -1,0 +1,54 @@
+.hero {
+	text-align: center;
+	padding: calc(var(--space) * 3) 0 calc(var(--space) * 2);
+}
+
+.hero-badge {
+	display: inline-block;
+	margin-bottom: var(--space);
+	padding: .25rem .8rem;
+	border: 1px solid var(--border);
+	border-radius: 999px;
+	background: var(--surface);
+	color: var(--text-soft);
+	font-size: .85rem;
+}
+
+.hero-title {
+	font-size: clamp(2rem, 6vw, 3.4rem);
+	letter-spacing: -.02em;
+}
+
+.hero-accent { color: var(--accent); }
+
+.hero-text {
+	max-width: 42rem;
+	margin: 0 auto calc(var(--space) * 1.5);
+	color: var(--text-soft);
+	font-size: 1.15rem;
+}
+
+.hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: .75rem;
+}
+
+.features {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: var(--space);
+	margin: calc(var(--space) * 2) 0;
+
+	h3 { font-size: 1.1rem; }
+	p  { margin: 0; color: var(--text-soft); }
+}
+
+.steps {
+	max-width: 46rem;
+	margin: 0 auto;
+
+	ol { padding-left: 1.2rem; }
+	li { margin-bottom: var(--space); }
+}

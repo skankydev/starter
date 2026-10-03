@@ -1,0 +1,30 @@
+// Structure des pages générées par `php craft crud-maker`.
+.page-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space);
+	margin-bottom: var(--space);
+}
+
+.page-title {
+	margin: 0;
+	font-size: 1.6rem;
+}
+
+.page-action {
+	display: flex;
+	gap: .5rem;
+}
+
+.page-content {
+	margin-bottom: calc(var(--space) * 2);
+}
+
+#Paginator {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: .35rem;
+}

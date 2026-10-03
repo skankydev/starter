@@ -1,0 +1,29 @@
+{
+    "name": "skankydev/starter",
+    "description": "Le point de départ d'un projet SkankyDev : on clone, on install, on code.",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App"
+        }
+    },
+    "authors": [
+        {
+            "name": "Skankydev",
+            "email": "simon.schenck@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.4",
+        "skankydev/framework": "^0.1"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "php -r \"file_exists('.env') || copy('.env.dist', '.env');\""
+        ]
+    }
+}
