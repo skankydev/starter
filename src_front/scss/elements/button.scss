@@ -1,0 +1,44 @@
+.btn,
+button {
+	display: inline-flex;
+	align-items: center;
+	gap: .4rem;
+	padding: .55rem 1.1rem;
+	border: 1px solid var(--accent);
+	border-radius: var(--radius);
+	background: var(--accent);
+	color: var(--accent-text);
+	font: inherit;
+	font-weight: 600;
+	text-decoration: none;
+	cursor: pointer;
+	transition: filter .15s;
+
+	&:hover { filter: brightness(1.1); }
+}
+
+.btn-primary { /* la couleur par défaut */ }
+
+.btn-secondary {
+	background: transparent;
+	color: var(--text);
+	border-color: var(--border);
+}
+
+@each $name, $var in (success: --success, info: --info, warning: --warning, error: --error) {
+	.btn-#{$name} {
+		background: var(#{$var});
+		border-color: var(#{$var});
+		color: var(--bg);
+	}
+}
+
+.btn-mini {
+	padding: .2rem .55rem;
+	font-size: .85rem;
+}
+
+.btn-disabled {
+	opacity: .45;
+	pointer-events: none;
+}

@@ -1,0 +1,20 @@
+.flash-wrapper {
+	max-width: var(--width);
+	margin: var(--space) auto 0;
+	padding: 0 var(--space);
+	display: grid;
+	gap: .5rem;
+}
+
+.flash-message {
+	padding: .7rem 1rem;
+	border: 1px solid var(--border);
+	border-left-width: 4px;
+	border-radius: var(--radius);
+	background: var(--surface);
+	cursor: pointer;
+}
+
+@each $name, $var in (success: --success, info: --info, warning: --warning, error: --error) {
+	.flash-#{$name} { border-left-color: var(#{$var}); }
+}

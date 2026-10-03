@@ -1,0 +1,34 @@
+#Header {
+	background: var(--surface);
+	border-bottom: 1px solid var(--border);
+}
+
+.header-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space);
+	max-width: var(--width);
+	margin: 0 auto;
+	padding: .9rem var(--space);
+}
+
+.header-brand {
+	font-weight: 800;
+	font-size: 1.2rem;
+	letter-spacing: .02em;
+	text-decoration: none;
+	color: var(--text);
+}
+
+.header-menu {
+	display: flex;
+	gap: var(--space);
+
+	a {
+		color: var(--text-soft);
+		text-decoration: none;
+
+		&:hover { color: var(--accent); }
+	}
+}

@@ -1,0 +1,30 @@
+.form-group {
+	display: grid;
+	gap: .35rem;
+	margin-bottom: var(--space);
+
+	label { font-weight: 600; }
+
+	&.has-error {
+		input, textarea, select { border-color: var(--error); }
+	}
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="color"]),
+textarea,
+select {
+	width: 100%;
+	padding: .55rem .75rem;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	background: var(--bg);
+	color: var(--text);
+	font: inherit;
+
+	&:focus {
+		outline: 2px solid var(--accent);
+		outline-offset: 1px;
+	}
+}
+
+textarea { min-height: 8rem; resize: vertical; }

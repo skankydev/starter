@@ -1,0 +1,14 @@
+// Pas de police d'icônes dans le starter : les classes `icon-*` utilisées par
+// les vues générées par le CrudMaker sont simplement des symboles unicode.
+// Remplace-les par ta police ou tes SVG quand tu veux.
+[class^="icon-"]::before { font-style: normal; }
+
+.icon-add::before        { content: "+"; }
+.icon-arrow-left::before { content: "←"; }
+.icon-save::before       { content: "✓"; }
+.icon-info::before       { content: "i"; }
+.icon-eye::before        { content: "◉"; }
+.icon-edit::before,
+.icon-edit-2::before     { content: "✎"; }
+.icon-trash::before,
+.icon-delete::before     { content: "✕"; }
