@@ -1,12 +1,12 @@
 # SkankyDev Starter
 
-**English** · [Français](README.fr.md)
-
-![PHP](https://img.shields.io/badge/PHP-8.2%2B-blue.svg)
+![PHP](https://img.shields.io/badge/PHP-8.4%2B-blue.svg)
 ![MongoDB](https://img.shields.io/badge/MongoDB-5.0%2B-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 [![Packagist](https://img.shields.io/packagist/v/skankydev/starter.svg)](https://packagist.org/packages/skankydev/starter)
 [![Why PHP](https://img.shields.io/badge/Why_PHP-in_2026-7A86E8?style=flat&labelColor=18181b)](https://whyphp.dev)
+
+**English** · [Français](README.fr.md)
 
 The starting point of a [SkankyDev](https://github.com/skankydev/framework) project: clone, install, code.
 
