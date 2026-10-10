@@ -6,6 +6,6 @@
 
 return [
 	'home' => [
-		'work' => 'We\'re rolling. Well done.',
+		'work' => 'It\'s running. Well done.',
 	],
 ];
