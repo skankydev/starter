@@ -1,27 +1,17 @@
 <?php
 /**
- * Bootstrap — chargé avant tout démarrage (web et CLI)
+ * Bootstrap de l'application — chargé après celui du framework
+ * (SkankyDev\Core\Bootstrap::boot() : .env, config, timezone, encodage),
+ * en web comme en CLI.
  *
- * Responsabilités :
- * - Chargement du .env
- * - Timezone par défaut (config `timeHelper.timezone`)
+ * C'est ici que va ce qui est propre au projet.
  */
 
-// Chargement du .env
-(function () {
-    $envFile = APP_FOLDER . DS . '.env';
-    if (!file_exists($envFile)) return;
-    foreach (file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
-        if (str_starts_with(trim($line), '#')) continue;
-        [$key, $value] = explode('=', $line, 2) + [1 => ''];
-        $_ENV[trim($key)] = trim($value);
-        putenv(trim($key) . '=' . trim($value));
-    }
-})();
+use SkankyDev\I18n\LocaleNegotiator;
+use SkankyDev\I18n\Translator;
 
-// Timezone par défaut — Config::initConf() ici est un no-op plus tard dans
-// Application::run()/CliApplication (garde sur self::$conf déjà rempli).
-(function () {
-    \SkankyDev\Config\Config::initConf();
-    date_default_timezone_set(\SkankyDev\Config\Config::get('timeHelper.timezone') ?? 'UTC');
-})();
+// Langue de l'interface, négociée sur le header Accept-Language parmi
+// `i18n.available` (en CLI pas de header : on garde `i18n.locale`).
+// Pour un sélecteur de langue, déplace cet appel dans un middleware placé
+// après Session, qui lit d'abord le choix en session.
+Translator::setLocale(LocaleNegotiator::negotiate());

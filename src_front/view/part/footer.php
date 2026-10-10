@@ -1,5 +1,5 @@
 <div class="footer-wrapper">
-	Propulsé par SkankyDev
+	Powered by SkankyDev
 </div>
 <!--
    _____ __ __            __             __

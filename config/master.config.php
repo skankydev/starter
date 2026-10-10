@@ -30,6 +30,12 @@ $conf =  [
 		'format'=>'Y-m-d H:i:s',
 		'timezone'=>getenv('APP_TIMEZONE') ?: 'UTC',
 	],
+	// traductions : src_front/lang/{langue}/{domaine}.php
+	'i18n' => [
+		'locale'    => 'en_US',
+		'fallback'  => 'en',
+		'available' => ['en_US', 'fr_FR'],
+	],
 ];
 
 return $conf;

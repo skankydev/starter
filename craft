@@ -1,5 +1,6 @@
 <?php
 require(__DIR__ . '/vendor/autoload.php');
+\SkankyDev\Core\Bootstrap::boot();
 require(__DIR__ . '/config/bootstrap.php');
 
 use SkankyDev\Cli\CliApplication;
