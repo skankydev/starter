@@ -10,16 +10,30 @@
 
 The starting point of a [SkankyDev](https://github.com/skankydev/framework) project: clone, install, code.
 
+## What you need
+
+- PHP 8.4 or later, with the `mongodb` (2.4.1 or later) and `intl` extensions;
+- Composer;
+- a running MongoDB;
+- *bonus*: Node.js and npm, only to work on the CSS and JS.
+
+**Before running anything**, go through the [02 Installation](https://github.com/skankydev/framework/blob/master/docs/en/002-Installation.md#what-you-need) chapter: you'll find the links, the usual traps (especially the `mongodb` extension) and the commands to check that everything is ready. If a command fails further down, it's almost always a missing requirement.
+
 ## Installation
 
 ```bash
 composer create-project skankydev/starter my-project
 cd my-project
-npm install
-npm run build
 ```
 
 `composer create-project` copies `.env.dist` to `.env` for you: open it and set up your MongoDB database.
+
+The CSS and JS ship already compiled. If you have Node.js and want to work on the front end:
+
+```bash
+npm install
+npm run dev
+```
 
 To try it right away, start PHP's built-in server from the project root, then open `http://localhost:8000`:
 
